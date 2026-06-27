@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1 - JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+            <img src="https://cl-dam-resizer.ecomm.cencosud.com/unsafe/adaptive-fit-in/3840x0/filters:quality(75)/cl/paris/794293999/variant/68f7bd62c5b5b043c83e4520/images/c46691ad-5de2-4a3a-ace0-5291bdfa0c80/794293999-0000-001.jpg"
+                alt="Laptop Gamer AMD">
+            <h6>Laptop Gamer AMD</h6>
+            <p>Precio base: $<span class="precio-inicial"></span> </p>
+
+            <p>Cantidad:
+                <span class="cantidad">0</span>
+                <button onclick="
+var cantidadSpan = document.querySelector('.cantidad');
+var cantidadActual = Number(cantidadSpan.innerHTML);
+var nuevaCantidad = cantidadActual + 1;
+cantidadSpan.innerHTML = nuevaCantidad;
+var precio = Number(document.querySelector('.precio-inicial').innerHTML);
+var total = precio * nuevaCantidad;
+document.querySelector('.valor-total').innerHTML = total;
+">+</button>
+
+                <button
+onclick="
+var cantidadSpan = document.querySelector('.cantidad');
+var cantidadActual = Number(cantidadSpan.innerHTML);
+var nuevaCantidad = cantidadActual - 1;
+cantidadSpan.innerHTML = nuevaCantidad;
+var precio = Number(document.querySelector('.precio-inicial').innerHTML);
+var total = precio * nuevaCantidad;
+document.querySelector('.valor-total').innerHTML = total;
+">-</button>
+              </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total"></span> </p>
+    </div>
+
+    <script src="index.js">
+      
+
+    </script>
+</body>
+</html>
